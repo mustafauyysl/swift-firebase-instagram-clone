@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451A846727C86A6000E98D77 /* KullaniciProfilHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451A846627C86A6000E98D77 /* KullaniciProfilHeader.swift */; };
+		451A846A27C86EFF00E98D77 /* Kullanici.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451A846927C86EFF00E98D77 /* Kullanici.swift */; };
+		457EDE7327CBF6800094014B /* OturumAcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EDE7227CBF6800094014B /* OturumAcController.swift */; };
+		457EDE7627CC2CC20094014B /* FotografSeciciController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457EDE7527CC2CC20094014B /* FotografSeciciController.swift */; };
+		45AE36E227C56E3C00BB538A /* AnaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE36E127C56E3C00BB538A /* AnaTabBarController.swift */; };
+		45AE36E427C5702500BB538A /* KullaniciProfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE36E327C5702500BB538A /* KullaniciProfilController.swift */; };
 		45BAEBB2278DB7DE00FECDAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAEBB1278DB7DE00FECDAA /* AppDelegate.swift */; };
 		45BAEBB4278DB7DE00FECDAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAEBB3278DB7DE00FECDAA /* SceneDelegate.swift */; };
-		45BAEBB6278DB7DE00FECDAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAEBB5278DB7DE00FECDAA /* ViewController.swift */; };
+		45BAEBB6278DB7DE00FECDAA /* KayitOlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAEBB5278DB7DE00FECDAA /* KayitOlController.swift */; };
 		45BAEBB9278DB7DE00FECDAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45BAEBB7278DB7DE00FECDAA /* Main.storyboard */; };
 		45BAEBBB278DB7E000FECDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BAEBBA278DB7E000FECDAA /* Assets.xcassets */; };
 		45BAEBBE278DB7E000FECDAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45BAEBBC278DB7E000FECDAA /* LaunchScreen.storyboard */; };
@@ -19,10 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		451A846627C86A6000E98D77 /* KullaniciProfilHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KullaniciProfilHeader.swift; sourceTree = "<group>"; };
+		451A846927C86EFF00E98D77 /* Kullanici.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kullanici.swift; sourceTree = "<group>"; };
+		457EDE7227CBF6800094014B /* OturumAcController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OturumAcController.swift; sourceTree = "<group>"; };
+		457EDE7527CC2CC20094014B /* FotografSeciciController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotografSeciciController.swift; sourceTree = "<group>"; };
+		45AE36E127C56E3C00BB538A /* AnaTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaTabBarController.swift; sourceTree = "<group>"; };
+		45AE36E327C5702500BB538A /* KullaniciProfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KullaniciProfilController.swift; sourceTree = "<group>"; };
 		45BAEBAE278DB7DE00FECDAA /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BAEBB1278DB7DE00FECDAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45BAEBB3278DB7DE00FECDAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		45BAEBB5278DB7DE00FECDAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45BAEBB5278DB7DE00FECDAA /* KayitOlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KayitOlController.swift; sourceTree = "<group>"; };
 		45BAEBB8278DB7DE00FECDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45BAEBBA278DB7E000FECDAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45BAEBBD278DB7E000FECDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,8 +64,40 @@
 				CD9335F1B455921A4AD45222 /* Pods-InstagramClone.debug.xcconfig */,
 				9C603606BC40F21690C4DD96 /* Pods-InstagramClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		451A846527C86A4300E98D77 /* KullaniciProfil */ = {
+			isa = PBXGroup;
+			children = (
+				45AE36E327C5702500BB538A /* KullaniciProfilController.swift */,
+				451A846627C86A6000E98D77 /* KullaniciProfilHeader.swift */,
+			);
+			path = KullaniciProfil;
+			sourceTree = "<group>";
+		};
+		451A846827C86EE700E98D77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				451A846927C86EFF00E98D77 /* Kullanici.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		457EDE7127CBF6710094014B /* OturumAc */ = {
+			isa = PBXGroup;
+			children = (
+				457EDE7227CBF6800094014B /* OturumAcController.swift */,
+			);
+			path = OturumAc;
+			sourceTree = "<group>";
+		};
+		457EDE7427CC2CB10094014B /* FotografEkle */ = {
+			isa = PBXGroup;
+			children = (
+				457EDE7527CC2CC20094014B /* FotografSeciciController.swift */,
+			);
+			path = FotografEkle;
 			sourceTree = "<group>";
 		};
 		45BAEBA5278DB7DE00FECDAA = {
@@ -77,10 +121,15 @@
 		45BAEBB0278DB7DE00FECDAA /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				457EDE7427CC2CB10094014B /* FotografEkle */,
+				457EDE7127CBF6710094014B /* OturumAc */,
+				451A846827C86EE700E98D77 /* Model */,
+				451A846527C86A4300E98D77 /* KullaniciProfil */,
 				45F61D3127C452AF00594FC3 /* Extensions */,
+				45AE36E127C56E3C00BB538A /* AnaTabBarController.swift */,
 				45BAEBB1278DB7DE00FECDAA /* AppDelegate.swift */,
 				45BAEBB3278DB7DE00FECDAA /* SceneDelegate.swift */,
-				45BAEBB5278DB7DE00FECDAA /* ViewController.swift */,
+				45BAEBB5278DB7DE00FECDAA /* KayitOlController.swift */,
 				45BAEBB7278DB7DE00FECDAA /* Main.storyboard */,
 				45BAEBBA278DB7E000FECDAA /* Assets.xcassets */,
 				45BAEBBC278DB7E000FECDAA /* LaunchScreen.storyboard */,
@@ -222,9 +271,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45BAEBB6278DB7DE00FECDAA /* ViewController.swift in Sources */,
+				457EDE7327CBF6800094014B /* OturumAcController.swift in Sources */,
+				457EDE7627CC2CC20094014B /* FotografSeciciController.swift in Sources */,
+				45BAEBB6278DB7DE00FECDAA /* KayitOlController.swift in Sources */,
+				451A846727C86A6000E98D77 /* KullaniciProfilHeader.swift in Sources */,
+				45AE36E227C56E3C00BB538A /* AnaTabBarController.swift in Sources */,
+				45AE36E427C5702500BB538A /* KullaniciProfilController.swift in Sources */,
 				45BAEBB2278DB7DE00FECDAA /* AppDelegate.swift in Sources */,
 				45BAEBB4278DB7DE00FECDAA /* SceneDelegate.swift in Sources */,
+				451A846A27C86EFF00E98D77 /* Kullanici.swift in Sources */,
 				45F61D3327C452E200594FC3 /* MColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

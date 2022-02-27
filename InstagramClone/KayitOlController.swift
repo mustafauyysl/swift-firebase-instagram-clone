@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  KayitOlController.swift
 //  InstagramClone
 //
 //  Created by Mustafa on 11.01.2022.
@@ -10,7 +10,7 @@ import Firebase
 import FirebaseFirestore
 import JGProgressHUD
 
-class ViewController: UIViewController {
+class KayitOlController: UIViewController {
     
     let btnFotografEkle : UIButton = {
         let btn = UIButton(type: .system)
@@ -123,7 +123,7 @@ class ViewController: UIViewController {
                         print("Görüntü adresini alınamadı : ", hata)
                         return
                     }
-                    print("Upload edile görüntünün url adresi : ", url?.absoluteString)
+                    print("Upload edilen görüntünün url adresi : ", url?.absoluteString)
                     
                     let eklenecekVeri = ["KullaniciAdi": kullaniciAdi, "KullaniciID": kaydolanKullaniciId, "ProfilGoruntuURL": url?.absoluteString ?? ""]
                     
@@ -135,6 +135,16 @@ class ViewController: UIViewController {
                         print("Kullanıcı verileri başarıyla kaydedildi")
                         hud.dismiss(animated: true)
                         self.gorunumuDuzelt()
+                        // Profile ekranına gitmek için
+                        let keyWindow = UIApplication.shared.connectedScenes
+                            .filter({$0.activationState == .foregroundActive})
+                            .map({$0 as? UIWindowScene})
+                            .compactMap({$0}).first?.windows
+                            .filter({$0.isKeyWindow}).first
+
+                        guard let anaTabBarController = keyWindow?.rootViewController as? AnaTabBarController else { return }
+                        anaTabBarController.gorunumuOlustur()
+                        self.dismiss(animated: true, completion: nil)
                     }
                     
                     
@@ -159,9 +169,27 @@ class ViewController: UIViewController {
         basariliHud.dismiss(afterDelay: 2)
     }
 
+    let btnHesabimVar : UIButton = {
+        let btn = UIButton(type: .system)
+
+        let attrBaslik = NSMutableAttributedString(string: "Zaten bir hesabınız var mı?", attributes: [.font : UIFont.systemFont(ofSize: 16), .foregroundColor : UIColor.lightGray])
+        attrBaslik.append(NSAttributedString(string: " Giriş yap", attributes: [.foregroundColor : UIColor.convertRgb(red: 20, green: 155, blue: 235), .font : UIFont.boldSystemFont(ofSize: 16)]))
+        btn.setAttributedTitle(attrBaslik, for: .normal)
+
+        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        btn.addTarget(self, action: #selector(hesabimVarPressed), for: .touchUpInside)
+        return btn
+    }()
+
+    @objc fileprivate func hesabimVarPressed() {
+        navigationController?.popViewController(animated: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.addSubview(btnHesabimVar)
+        view.backgroundColor = .white
+        navigationController?.isNavigationBarHidden = true
         view.addSubview(btnFotografEkle)
         //  frame özelliği bir nesneyi heme konumlandırmak için kullanılır ve kalıcıdır
         // btnFotografEkle.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
@@ -170,7 +198,8 @@ class ViewController: UIViewController {
         
         btnFotografEkle.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         btnFotografEkle.anchor(top: view.safeAreaLayoutGuide.topAnchor, bottom: nil, leading: nil, trailing: nil, paddingTop: 40, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, height: 150, width: 150)
-                
+        btnHesabimVar.anchor(top: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, height: 50, width: 0)
+
         girisAlanlariniOlustur()
 
     }
@@ -233,7 +262,7 @@ extension UIView {
     }
 }
 
-extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension KayitOlController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
